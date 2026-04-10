@@ -1561,10 +1561,31 @@
               delete app.answers['drink_gate_q2'];
             }
             renderQuestions();
+            setTimeout(() => {
+              if (window.innerWidth <= 600) {
+                const radios = document.getElementsByName('drink_gate_q1');
+                if (radios.length > 0) {
+                  const article = radios[0].closest('article.question');
+                  if (article && article.nextElementSibling) {
+                    article.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }
+              }
+            }, 150);
             return;
           }
 
           updateProgress();
+
+          if (window.innerWidth <= 600) {
+            const currentArticle = e.target.closest('article.question');
+            const nextArticle = currentArticle ? currentArticle.nextElementSibling : null;
+            if (nextArticle) {
+              setTimeout(() => {
+                nextArticle.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 150);
+            }
+          }
         });
       });
 
