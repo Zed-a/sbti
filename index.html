@@ -158,12 +158,20 @@
     button:disabled { cursor: not-allowed; opacity: 0.55; transform: none; }
 
     .btn-primary {
-      background: var(--accent-strong);
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
       color: #fff;
-      padding: 14px 20px;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(77, 106, 83, 0.18);
-      font-weight: 700;
+      padding: 16px 32px;
+      font-size: 17px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(77, 106, 83, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.15);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    .btn-primary:hover:not(:disabled) {
+      box-shadow: 0 12px 32px rgba(77, 106, 83, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px) scale(1.02);
     }
 
     .btn-secondary {
@@ -693,18 +701,18 @@
   <div class="shell">
     <section id="intro" class="screen active">
       <div class="hero card hero-minimal">
-        <h1>MBTI已过时，SBTI来了。</h1>
-        <div class="hero-actions hero-actions-single">
-          <button id="startBtn" class="btn-primary">开始测试→</button>
+        <div class="eyebrow" style="margin-bottom: 20px;">🤯 全网爆火的性格解析模型</div>
+        <h1 style="max-width: 680px; font-size: clamp(26px, 5vw, 42px);">SBTI 人格测试</h1>
+        <div style="font-size: 22px; font-weight: 600; color: var(--accent-strong); margin-top: 12px; letter-spacing: 2px;">纯免费 · 无广告</div>
+        <p class="sub" style="margin-top: 18px; font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 640px;">
+          MBTI 玩腻了？来试试更懂年轻人的 <strong>SBTI 人格自测神器</strong>！<br/>只需 3 分钟，通过 15 个精准维度，直击真实的灵魂。<br/>
+        </p>
+        <div class="hero-actions hero-actions-single" style="margin-top: 32px;">
+          <button id="startBtn" class="btn-primary" style="padding: 18px 48px; font-size: 18px;">⚡ 立即测试，接受灵魂拷问</button>
         </div>
-             <div style="padding-top: 2rem; display: flex; flex-direction: column;">
-          <span>
-            人类性格测评榜·全网热度TOP1 
-          </span>
-           <span>
-            SBTI 人格测试，新一代人格自测神器🔥现已火爆全网！只需 3 分钟，即可快速测出你的专属人格类型，精准解读性格特质，帮你轻松找到同频搭子，好玩又解压。
-          </span>
-        </div> 
+        <div style="margin-top: 24px; color: #a1b0a6; font-size: 13px;">
+          💡 测评免费且全网热度TOP1，测完别破防哦
+        </div>
       </div>
     </section>
 
