@@ -719,6 +719,11 @@
       .dim-grid,
       .score-grid { grid-template-columns: 1fr; }
     }
+
+    /* 审核期临时开启防封隐藏（先不展示引流卡片和二维码），等审核通过后直接删除这几行代码即可恢复 */
+    .mobile-only-promo { display: none !important; }
+    img[src="qrcode.jpg"], img[src="qrcode.jpg"] + div { display: none !important; }
+
     @media (min-width: 601px) {
       .mobile-only-promo { display: none !important; }
     }
@@ -739,6 +744,20 @@
 
         <div style="margin-top: 24px; color: #a1b0a6; font-size: 13px;">
           💡 测评完全免费，测完别破防哦
+        </div>
+
+        <!-- SBTI 小程序专属引流位 (PC/Mobile可见) -->
+        <div style="margin-top: 20px;">
+          <a href="sbti_mini.html" style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1px solid rgba(7, 193, 96, 0.4); box-shadow: 0 8px 24px rgba(7, 193, 96, 0.12); width: 100%; max-width: 340px; margin: 0 auto; padding: 14px 18px; border-radius: 16px; text-decoration: none; transition: all 0.2s;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="sbti_mini_qr.png" alt="SBTI小程序" style="width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.06); flex-shrink: 0;">
+              <div style="text-align: left;">
+                <div style="font-size: 15px; font-weight: bold; color: var(--text);">用小程序测试更方便</div>
+                <div style="font-size: 12px; color: var(--muted); margin-top: 3px;">体验更佳，一键找回结果</div>
+              </div>
+            </div>
+            <div style="color: #07c160; font-weight: bold; font-family: monospace; font-size: 22px;">&rsaquo;</div>
+          </a>
         </div>
 
         <!-- 微信小程序引流位 -->
