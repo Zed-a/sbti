@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sbti.nxbase.site/sitemap.xml
